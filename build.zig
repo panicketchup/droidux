@@ -1,4 +1,4 @@
-//const std = @import("std");
+const std = @import("std");
 
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
@@ -16,7 +16,8 @@ pub fn build(b: *std.Build) void {
     exe.pie = pie;
 
     const clap = b.dependency("clap", .{});
-    exe.root_module.addImport("clap", clap.module("clap"));
+    // exe.root_module.addImport("clap", clap.module("clap"));
+    exe.addPackagePath("clap", "./zig-clap/zig/clap.zig");
 
     // For uinput
     exe.linkLibC();
