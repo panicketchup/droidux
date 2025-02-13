@@ -18,7 +18,6 @@ pub fn build(b: *std.Build) void {
     //const clap = b.dependency("clap", .{});
     // exe.root_module.addImport("clap", clap.module("clap"));
     exe.addPackagePath("clap", "libs/zig-clap/clap.zig");
-    const clap = @import("clap");
     // For uinput
     exe.linkLibC();
 
