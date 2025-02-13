@@ -24,14 +24,16 @@
     // internet connectivity.
     .dependencies = .{
         .clap = .{
-            .path = "./zig-clap/clap.zig",
+            .path = "./zig-clap/",
         },
     },
     .paths = .{
         
         "./build.zig",
         "./build.zig.zon",
-        "./src",
+        "./clap",
+        "./scr",
+        "./clap.zig",
         // For example...
         //"LICENSE",
         //"README.md",
